@@ -56,10 +56,18 @@ people.sort(key=mf)
 #people.sort(key=lambda person: person["name"])
 print(people)
 
-num1 = int(input("num1"))
-num2 = int(input("num2"))
+import sys
+try:
+    num1 = int(input("num1: "))
+    num2 = int(input("num2: "))
+except ValueError:
+    print("numbers only")
+    sys.exit(1)
+
 try:
     result = num1 / num2
-    print(result)
 except ZeroDivisionError:
-    print("dont divide by zero bitch")
+    print("dont divide by zero")
+    sys.exit(1)
+    
+print(f"{num1} / {num2} = {result}")
