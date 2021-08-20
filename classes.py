@@ -22,9 +22,24 @@ class Flight():
 
 flight = Flight(3)
 people = ["Majdi", "Zaid", "Ahmad", "Talal"]
+
 for person in people:
-        success = flight.addpassenger(person)
+    
+        success =  flight.addpassenger(person)
         if success:
             print(f"Added {person} to flight successfully")
         else:
             print(f"No available seats for {person}")
+
+def announce(f):
+    def wrapper():
+        print("i will run")
+        f()
+        print("i ran")
+    return wrapper
+
+@announce
+def hello():
+    print("hi")
+
+hello()
