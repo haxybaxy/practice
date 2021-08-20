@@ -43,3 +43,20 @@ def hello():
     print("hi")
 
 hello()
+
+people = [
+    {"name":"Ahmad Azzeh", "Subjects":"Bio/chem"},
+    {"name":"Majdi Shehab", "Subjects":"Bio/chem"},
+    {"name":"Zaid Saheb", "Subjects":"CS/Physics"},
+    {"name":"Talal Barakat", "Subjects":"Business/Phyics"},
+]
+
+def mf(person):
+    return person["name"]
+
+
+people.sort(key=mf)
+#people.sort(key=lambda person: person["name"])
+
+print(people)
+
