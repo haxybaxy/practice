@@ -50,13 +50,16 @@ people = [
     {"name":"Zaid Saheb", "Subjects":"CS/Physics"},
     {"name":"Talal Barakat", "Subjects":"Business/Phyics"},
 ]
-
 def mf(person):
     return person["name"]
-
-
 people.sort(key=mf)
 #people.sort(key=lambda person: person["name"])
-
 print(people)
 
+num1 = int(input("num1"))
+num2 = int(input("num2"))
+try:
+    result = num1 / num2
+    print(result)
+except ZeroDivisionError:
+    print("dont divide by zero bitch")
